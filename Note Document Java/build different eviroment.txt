@@ -1,0 +1,4 @@
+set JAVA_HOME = C:\project\JAVA\jrockit-jdk1.6.0_45-R28.2.7-4.1.0
+set ANT_HOME = C:\project\apache-ant-1.9.10
+set ANT_OPTS=-Xmx512m -XX:MaxPermSize=1024m
+ant -buildfile=build.xml  

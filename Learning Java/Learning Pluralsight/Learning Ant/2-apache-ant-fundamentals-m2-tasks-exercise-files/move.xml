@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<project name="move Example" default ="movefile" basedir=".">
+
+	<target name="movefile">
+		<move file="etc/README.TXT" tofile="backcup/README.TXT"/>
+	
+	</target>
+  
+</project>

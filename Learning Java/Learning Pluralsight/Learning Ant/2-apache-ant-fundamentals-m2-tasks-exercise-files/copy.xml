@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<project name="Copy Example" default ="copyfile" basedir=".">
+
+	<target name="copyfile">
+		<copy file="etc/MANIFEST.MF" tofile="backcup/MAINIFEST.MF"/>
+	
+	</target>
+  
+</project>

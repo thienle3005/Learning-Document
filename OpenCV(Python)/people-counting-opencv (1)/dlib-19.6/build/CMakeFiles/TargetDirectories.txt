@@ -1,0 +1,6 @@
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/CMakeFiles/INSTALL.dir
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/dlib/CMakeFiles/dlib.dir
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/dlib/CMakeFiles/INSTALL.dir
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/dlib/CMakeFiles/ALL_BUILD.dir

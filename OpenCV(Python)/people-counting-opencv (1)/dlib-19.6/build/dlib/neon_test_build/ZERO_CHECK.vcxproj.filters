@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\tle249\Documents\Learning document\OpenCV(Python)\people-counting-opencv (1)\dlib-19.6\build\dlib\neon_test_build\CMakeFiles\1d9d23d5f9c2fb1a43298b3163dd5f48\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{96E9A170-F209-3B0A-A96E-8C41CFA8040C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

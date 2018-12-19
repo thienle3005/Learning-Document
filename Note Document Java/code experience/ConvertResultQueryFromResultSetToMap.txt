@@ -1,0 +1,36 @@
+
+//
+//
+private Map<String, Object> getEmailTemplate(String emailID) throws Exception {
+		PreparedStatement statement = null;
+		ResultSet rs = null;
+		
+		String sql = sqlReader.readQuery("getEmailTemplate");
+		statement = conn.prepareStatement(sql);
+		statement.setString(1, emailID);
+		rs = statement.executeQuery();
+		
+		List<Map<String, Object>> emailTemplate = dbConn.parseResultset(rs);
+		if (emailTemplate != null && !emailTemplate.isEmpty()) {
+			return emailTemplate.get(0);
+		}
+		
+		return null;
+	}
+
+// convert result query from ResultSet(many column and one row) to List(namecolumn and value)
+public List<Map<String, Object>> parseResultset(ResultSet rs) throws SQLException {
+		List<Map<String, Object>> result = new ArrayList<>();
+		ResultSetMetaData rsMeta = rs.getMetaData();
+		int columnCount = rsMeta.getColumnCount();
+		
+		while (rs.next()) {
+			Map<String, Object> record = new HashMap<>();
+			for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
+				record.put(rsMeta.getColumnName(columnIndex), rs.getObject(columnIndex));
+			}
+			result.add(record);
+		}
+		
+		return result;
+	}

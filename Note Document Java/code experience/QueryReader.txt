@@ -1,0 +1,49 @@
+// read query from script in sql
+[updateTempLicenceStatus]
+	UPDATE lic_appln lic
+  	SET lic.Status_Cd = 'CL', DATE_UPDATED = sysdate, UPDATED_BY = 'SYSADMIN'
+  	WHERE lic.Trans_Id IN (<TRANS_IDS>)
+[/updateTempLicenceStatus]
+//
+public class QueryReader {
+	String fileName;
+	public QueryReader(String fileName) {
+		this.fileName = fileName;
+	}
+	public String readQuery(String queryName) throws Exception {
+		boolean flag = false;
+		String query = "";
+		String outLine;
+		BufferedReader reader = new BufferedReader(new FileReader(fileName));
+		while ((outLine = reader.readLine()) != null) {
+			if (outLine.equals("[" + queryName + "]")) {
+				flag = true;
+				continue;
+			} else if (outLine.equals("[/" + queryName + "]")) {
+				break;
+			}
+			if (flag == true) {
+				query = query + outLine + " ";
+			}
+		}
+		if (flag == false) {
+			throw new Exception(
+				"No Query Named [" + queryName + "] was found.");
+		}
+		return query;
+	}
+}
+
+
+	private List<Map<String, Object>> getCreditTransactionList(String interfaceBatchId) {
+		try {
+			PreparedStatement statement = null;
+			String sql = sqlReader.readQuery("getCreditTransactionList");
+			ResultSet rs = null;
+			
+			statement = conn.prepareStatement(sql);
+			statement.setString(1, interfaceBatchId);
+			
+			rs = statement.executeQuery();
+			return dbConn.parseResultset(rs);
+		} catch (Exception ex) {}

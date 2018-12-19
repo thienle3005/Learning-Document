@@ -1,0 +1,29 @@
+<action name="doIndividual" class="doIndividualBean">
+<bean name="doIndividualBean" class="com.csa.ida_icms.action.ua.UaIndividualAction" scope="prototype">
+
+try {
+			Session session = this.getSession(false);
+			StringBuilder hql = new StringBuilder();
+			hql.append("SELECT DISTINCT track, subTrack");
+			hql.append("FROM SFJobsMapping M");
+			hql.append("INNER JOIN SFItem T1 ON M.track = T1.id");
+			hql.append("INNER JOIN SFItem T2 ON M.track = T2.id");
+			
+			Query query = session.createQuery(hql.toString());
+			
+			List<SFJobsMapping> listTrackSubtrackId = query.list();
+			
+			return listTrackSubtrackId;
+			
+		} catch (HibernateException e) {
+			AbsHibernateDAO.getLogger().error(e.getMessage(), e);
+			throw this.convertHibernateAccessException(e);
+		} catch (IllegalStateException e) {
+			AbsHibernateDAO.getLogger().error(e.getMessage(), e);
+			throw e;
+		}
+
+
+SELECT DISTINCT TRACK_ID, SUB_TRACK_ID, CONCAT(CONCAT(T1.TITLE,'-'),T2.TITLE) AS TITLE FROM SF_JOBS_MAPPING M
+INNER JOIN SF_ITEM T1 ON M.TRACK_ID = T1.ID
+INNER JOIN SF_ITEM T2 ON M.SUB_TRACK_ID = T2.ID;

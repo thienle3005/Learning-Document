@@ -1,0 +1,93 @@
+
+package com.csa.ida_icms.services.sf.model;
+
+public class TrackAndSubTrackModel {
+
+    private Long trackId;
+    private Long subTrackId;
+    private String trackTitle;
+    private String subTrackTitle;
+    private String trackAndSubId;
+    private String trackAndSubTitle;
+
+    public Long getTrackId() {
+        return trackId;
+    }
+
+    public void setTrackId(Long trackId) {
+        this.trackId = trackId;
+    }
+
+    public Long getSubTrackId() {
+        return subTrackId;
+    }
+
+    public void setSubTrackId(Long subTrackId) {
+        this.subTrackId = subTrackId;
+    }
+
+    public String getTrackTitle() {
+        return trackTitle;
+    }
+
+    public void setTrackTitle(String trackTitle) {
+        this.trackTitle = trackTitle;
+    }
+
+    public String getSubTrackTitle() {
+        return subTrackTitle;
+    }
+
+    public void setSubTrackTitle(String subTrackTitle) {
+        this.subTrackTitle = subTrackTitle;
+    }
+
+    public String getTrackAndSubId() {
+        return String.valueOf(this.trackId) + "_" + String.valueOf(this.subTrackId);
+    }
+
+    public void setTrackAndSubId(String trackAndSubId) {
+        this.trackAndSubId = trackAndSubId;
+    }
+
+    public String getTrackAndSubTitle() {
+        return this.trackTitle + "-" + this.subTrackTitle;
+    }
+
+    public void setTrackAndSubTitle(String trackAndSubTitle) {
+        this.trackAndSubTitle = trackAndSubTitle;
+    }
+}
+
+
+
+
+
+public List<TrackAndSubTrackModel> getListTrackSubTrack() throws DataAccessException {
+		try {
+			Session session = this.getSession(false);
+			Criteria criteria = session.createCriteria( SFJobsMapping.class, "sfMap" )
+					                     .createAlias("sfMap.track", "track", Criteria.INNER_JOIN)
+					                     .createAlias("sfMap.subTrack", "subTrack", Criteria.INNER_JOIN);
+			ProjectionList projList = Projections.projectionList();
+			projList.add(Projections.property("track.id"), "trackId");
+			projList.add(Projections.property("subTrack.id"), "subTrackId");
+			projList.add(Projections.property("track.title"), "trackTitle");
+			projList.add(Projections.property("subTrack.title"), "subTrackTitle");
+
+			criteria.setProjection(Projections.distinct(projList));
+			criteria.add(Restrictions.eq("statusCode", CommonConstants.STATUS_ACTIVE));
+			criteria.addOrder(Order.asc("track.title"));
+			criteria.addOrder(Order.asc("subTrack.title"));
+			criteria.setResultTransformer(Transformers.aliasToBean(TrackAndSubTrackModel.class));
+
+			return criteria.list();
+
+		} catch (HibernateException e) {
+			AbsHibernateDAO.getLogger().error(e.getMessage(), e);
+			throw this.convertHibernateAccessException(e);
+		} catch (IllegalStateException e) {
+			AbsHibernateDAO.getLogger().error(e.getMessage(), e);
+			throw e;
+		}
+	}

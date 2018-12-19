@@ -1,0 +1,1 @@
+fix login raspberry: sudo apt-get install lxsession

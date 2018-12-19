@@ -1,0 +1,32 @@
+# CMake generation dependency list for this directory.
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/build/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/CMakeLists.txt
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/add_global_compiler_switch.cmake
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/check_if_neon_available.cmake
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/cmake_find_blas.txt
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/dlib.pc.in
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/dlibConfig.cmake.in
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/release_build_by_default
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/cmake_utils/use_cpp_11.cmake
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/config.h.in
+C:/Users/tle249/Documents/Learning document/OpenCV(Python)/people-counting-opencv (1)/dlib-19.6/dlib/revision.h.in
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CMakePackageConfigHelpers.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckFunctionExists.c
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckFunctionExists.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckIncludeFile.c.in
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckIncludeFile.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckIncludeFileCXX.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckTypeSize.c.in
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/CheckTypeSize.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindCUDA.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindCUDA/select_compute_arch.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindGIF.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindJPEG.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindPNG.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindPackageMessage.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/FindZLIB.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/GNUInstallDirs.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/SelectLibraryConfigurations.cmake
+C:/Users/tle249/Downloads/extract/cmake-3.12.4-win64-x64/cmake-3.12.4-win64-x64/share/cmake-3.12/Modules/WriteBasicConfigVersionFile.cmake
